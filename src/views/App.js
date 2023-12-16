@@ -10,7 +10,7 @@ function App() {
         <p>
           Hello world with React.js (Hoi Dan IT)
         </p>
-        <MyComponent />
+        <MyComponent name={'bao'} phone={'235235'} />
         <a
           className="App-link"
           href="https://reactjs.org"

@@ -24,15 +24,16 @@ class MyComponent extends React.Component {
     };
 
     render() {
+        let { name, phone } = this.props;
         return (
             <>
                 <form>
                     <br />
-                    <label >Name</label>
-                    <input className="form-control" type="text" value={this.state.name} onChange={(event) => { this.typingNameHandler(event) }}></input>
+                    <label>Name</label>
+                    <input className="form-control" type="text" value={name} onChange={(event) => { this.typingNameHandler(event) }}></input>
                     <br />
                     <label>Phone</label>
-                    <input className="form-control" type="text" value={this.state.phone} onChange={(event) => { this.typingPhoneHandler(event) }}></input>
+                    <input className="form-control" type="text" value={phone} onChange={(event) => { this.typingPhoneHandler(event) }}></input>
                 </form>
                 <button onClick={() => { this.buttonClickHandler() }} >Submit</button>
             </>
