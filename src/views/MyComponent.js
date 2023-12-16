@@ -3,20 +3,38 @@ import React from "react";
 class MyComponent extends React.Component {
 
     state = {
-        value: 'World',
-    }
-    onClick = () => {
-        this.setState({ value: 'Bao' });
-    }
+        name: '',
+        phone: '',
+    };
+
+    typingNameHandler = (event) => {
+        this.setState({
+            name: event.target.value
+        })
+    };
+
+    typingPhoneHandler = (event) => {
+        this.setState({
+            phone: event.target.value
+        })
+    };
+
+    buttonClickHandler = () => {
+        console.log(this.state);
+    };
+
     render() {
         return (
             <>
-                <div className="firstDiv">
-                    <button onClick={this.onClick}>Click</button>
-                </div>
-                <div className="secondDiv">
-                    Hello {this.state.value}
-                </div>
+                <form>
+                    <br />
+                    <label >Name</label>
+                    <input className="form-control" type="text" value={this.state.name} onChange={(event) => { this.typingNameHandler(event) }}></input>
+                    <br />
+                    <label>Phone</label>
+                    <input className="form-control" type="text" value={this.state.phone} onChange={(event) => { this.typingPhoneHandler(event) }}></input>
+                </form>
+                <button onClick={() => { this.buttonClickHandler() }} >Submit</button>
             </>
         )
     }
