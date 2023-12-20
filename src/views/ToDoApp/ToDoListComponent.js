@@ -1,9 +1,9 @@
 import React from 'react';
 import ToDoComponent from './ToDoComponent';
-import './App.scss'
+import '../App.scss'
 import { toast } from 'react-toastify';
 
-class MainComponent extends React.Component {
+class ToDoListComponent extends React.Component {
     state = {
         content: '',
         toDoList: [
@@ -95,4 +95,4 @@ class MainComponent extends React.Component {
         )
     }
 }
-export default MainComponent;
+export default ToDoListComponent;

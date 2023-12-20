@@ -1,26 +1,35 @@
-
 import './App.scss';
-import MainComponent from './MainComponent';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import NavComponent from './Nav/NavComponent';
+import HomeComponent from './Home/HomeComponent';
+import ToDoListComponent from './ToDoApp/ToDoListComponent';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <MainComponent />
-      <ToastContainer
-        position="bottom-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header>
+          <NavComponent></NavComponent>
+        </header>
+        <div>
+          <Switch>
+            <Route path={`/`} exact>
+              <HomeComponent />
+            </Route>
+            <Route path={`/todo`}>
+              <ToDoListComponent />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
