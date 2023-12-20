@@ -13,7 +13,7 @@ class NavComponent extends React.Component {
                     <input type="radio" name="slider" id="close-btn" />
                     <ul className="nav-links">
                         <label htmlFor="close-btn" className="btn close-btn"><i className="fas fa-times"></i></label>
-                        <li><Link to="/" exact={true}>Home</Link></li>
+                        <li><Link to="/">Home</Link></li>
                         <li><Link to="/todo">To-do-app</Link></li>
                         <li>
                             <a href="{''}" className="desktop-item">Dropdown Menu</a>

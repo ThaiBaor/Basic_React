@@ -1,6 +1,6 @@
 import React from 'react';
 import ToDoComponent from './ToDoComponent';
-import '../App.scss'
+import './ToDoApp.scss'
 import { toast } from 'react-toastify';
 
 class ToDoListComponent extends React.Component {
